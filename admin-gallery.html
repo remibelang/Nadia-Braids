@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Gallery | Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-body">
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-crown"></i>
+            <span>Royal Braids</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="admin-dashboard.html">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="admin-services.html">
+                <i class="fas fa-cut"></i>
+                <span>Services</span>
+            </a>
+            <a href="admin-gallery.html" class="active">
+                <i class="fas fa-images"></i>
+                <span>Gallery</span>
+            </a>
+            <a href="admin-settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+            <a href="#" id="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="admin-main">
+        <header class="admin-header">
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h2>Manage Gallery</h2>
+            <div class="admin-user">
+                <span id="admin-email">Admin</span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </header>
+
+        <div class="admin-content">
+            <div class="admin-section">
+                <div class="section-header">
+                    <h3><i class="fas fa-cloud-upload-alt"></i> Upload Photo</h3>
+                </div>
+                <form id="gallery-form" class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Photo Title</label>
+                            <input type="text" id="gallery-title" placeholder="e.g. Knotless Braids - Medium">
+                        </div>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select id="gallery-category">
+                                <option value="box-braids">Box Braids</option>
+                                <option value="cornrows">Cornrows</option>
+                                <option value="twists">Twists</option>
+                                <option value="locs">Locs</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Upload Image *</label>
+                        <div class="file-upload">
+                            <input type="file" id="gallery-file" accept="image/*" required>
+                            <div class="file-upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Click to upload or drag and drop</span>
+                                <small>PNG, JPG up to 5MB</small>
+                            </div>
+                        </div>
+                        <div id="upload-preview" class="upload-preview"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-upload"></i> Upload to Gallery
+                    </button>
+                </form>
+                <div id="gallery-message" class="message"></div>
+            </div>
+
+            <div class="admin-section">
+                <div class="section-header">
+                    <h3><i class="fas fa-images"></i> Gallery Photos</h3>
+                </div>
+                <div class="admin-gallery-grid" id="admin-gallery-grid">
+                    <div class="loading">Loading gallery...</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/admin-auth.js"></script>
+    <script src="js/admin-gallery.js"></script>
+</body>
+</html>

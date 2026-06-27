@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Services | Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-body">
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-crown"></i>
+            <span>Royal Braids</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="admin-dashboard.html">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="admin-services.html" class="active">
+                <i class="fas fa-cut"></i>
+                <span>Services</span>
+            </a>
+            <a href="admin-gallery.html">
+                <i class="fas fa-images"></i>
+                <span>Gallery</span>
+            </a>
+            <a href="admin-settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+            <a href="#" id="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="admin-main">
+        <header class="admin-header">
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h2>Manage Services</h2>
+            <div class="admin-user">
+                <span id="admin-email">Admin</span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </header>
+
+        <div class="admin-content">
+            <div class="admin-section">
+                <div class="section-header">
+                    <h3><i class="fas fa-plus-circle"></i> Add New Service</h3>
+                </div>
+                <form id="service-form" class="admin-form">
+                    <input type="hidden" id="service-id">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Service Name *</label>
+                            <input type="text" id="service-name" required placeholder="e.g. Knotless Box Braids">
+                        </div>
+                        <div class="form-group">
+                            <label>Category *</label>
+                            <select id="service-category" required>
+                                <option value="box-braids">Box Braids</option>
+                                <option value="cornrows">Cornrows</option>
+                                <option value="twists">Twists</option>
+                                <option value="locs">Locs</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Price ($) *</label>
+                            <input type="number" id="service-price" required min="0" step="0.01" placeholder="150.00">
+                        </div>
+                        <div class="form-group">
+                            <label>Duration (hours)</label>
+                            <input type="text" id="service-duration" placeholder="4-6 hours">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea id="service-description" rows="3" placeholder="Describe the service..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Image URL</label>
+                        <input type="url" id="service-image" placeholder="https://example.com/image.jpg">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" id="service-submit">
+                            <i class="fas fa-save"></i> Save Service
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="service-cancel" style="display:none;">
+                            <i class="fas fa-times"></i> Cancel
+                        </button>
+                    </div>
+                </form>
+                <div id="service-message" class="message"></div>
+            </div>
+
+            <div class="admin-section">
+                <div class="section-header">
+                    <h3><i class="fas fa-list"></i> All Services</h3>
+                </div>
+                <div class="table-responsive">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Duration</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="services-table">
+                            <tr>
+                                <td colspan="6" class="text-center">Loading services...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/admin-auth.js"></script>
+    <script src="js/admin-services.js"></script>
+</body>
+</html>

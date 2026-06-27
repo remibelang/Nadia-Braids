@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | Professional Hair Braiding</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-crown"></i>
+                <span class="business-name">Royal Braids</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="booking.html" class="active">Book Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Book Your Appointment</h1>
+            <p>Reserve your spot for a premium braiding experience</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="booking-layout">
+                <div class="booking-form-container">
+                    <form id="booking-form" class="booking-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="(404) 555-0123">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Select Service *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Choose a style...</option>
+                                <!-- Options loaded dynamically -->
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date *</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time *</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Select time...</option>
+                                    <option value="09:00">9:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Special Requests</label>
+                            <textarea id="notes" name="notes" rows="4" placeholder="Hair length, preferred braid size, any allergies..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-calendar-check"></i> Request Appointment
+                        </button>
+                    </form>
+                    <div id="booking-message" class="message"></div>
+                </div>
+
+                <div class="booking-info">
+                    <h3>Booking Information</h3>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Tuesday - Saturday<br>9:00 AM - 7:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-hourglass-half"></i>
+                        <div>
+                            <h4>Duration</h4>
+                            <p>Most styles take 4-8 hours<br>Please plan accordingly</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <div>
+                            <h4>Deposit</h4>
+                            <p>A $30 deposit is required<br>to secure your appointment</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Questions?</h4>
+                            <p>Call us at <span id="booking-phone">(404) 555-0123</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p> Royal Braids. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+</html>
