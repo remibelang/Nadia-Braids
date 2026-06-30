@@ -3,97 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Hair Braiding</title>
+    <meta name="google-site-verification" content="xbhFPrl0ykPRsAzjjzNnTTH594koVSXyyz1Ws5fhiXM" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Nadia Braids | Professional Hair Braiding Salon in Bear, DE</title>
+    <meta name="description" content="Nadia Braids offers professional hair braiding services in Bear, Delaware. Box braids, cornrows, twists, knotless braids & more. Book your appointment today!">
+    <meta name="keywords" content="hair braiding, box braids, cornrows, twists, professional braider, hair salon, Nadia Braids, Bear Delaware, Delaware braids">
+    <meta name="author" content="Nadia Braids">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Nadia Braids | Professional Hair Braiding Salon in Bear, DE">
+    <meta property="og:description" content="Expert hair braiding services in Bear, Delaware. Box braids, cornrows, twists & more. Book now!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nadia-braids.netlify.app/">
+    <meta property="og:image" content="https://nadia-braids.netlify.app/images/og-image.jpg">
+    <meta property="og:site_name" content="Nadia Braids">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nadia Braids | Professional Hair Braiding Salon in Bear, DE">
+    <meta name="twitter:description" content="Expert hair braiding services in Bear, Delaware. Box braids, cornrows, twists & more. Book now!">
+    <meta name="twitter:image" content="https://nadia-braids.netlify.app/images/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nadia-braids.netlify.app/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/reviews.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Nadia Braids",
+        "description": "Professional hair braiding salon in Bear, Delaware specializing in box braids, cornrows, twists, knotless braids, and protective styles.",
+        "url": "https://nadia-braids.netlify.app",
+        "telephone": "+1-240-855-5478",
+        "email": "nadiayenchi3@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1137 King James Court",
+            "addressLocality": "Bear",
+            "addressRegion": "DE",
+            "postalCode": "19701",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "39.6293",
+            "longitude": "-75.6584"
+        },
+        "openingHours": [
+            "Mo-Fr 09:00-19:00",
+            "Sa 09:00-17:00"
+        ],
+        "priceRange": "$$",
+        "image": "https://nadia-braids.netlify.app/images/salon.jpg",
+        "sameAs": [
+            "https://www.facebook.com/nadiabraids",
+            "https://www.instagram.com/nadiabraids"
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
             <a href="index.html" class="logo">
-                <i class="fas fa-crown"></i>
-                <span id="business-name">Royal Braids</span>
+                <span class="logo-text">Nadia</span><span class="logo-accent">Braids</span>
             </a>
-            <button class="nav-toggle" id="navToggle">
-                <i class="fas fa-bars"></i>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="booking.html">Book Now</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="booking.html" class="nav-link">Book Now</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <section class="hero" id="home">
         <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1>Exquisite Hair Braiding</h1>
-                <p>Professional styles that celebrate your beauty and culture</p>
-                <div class="hero-buttons">
-                    <a href="booking.html" class="btn btn-primary">Book Appointment</a>
-                    <a href="services.html" class="btn btn-outline">View Services</a>
-                </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Beautiful Braids,<br>Professional Touch</h1>
+            <p class="hero-subtitle">Expert hair braiding services in Bear, Delaware. From box braids to cornrows, we create stunning styles that last.</p>
+            <div class="hero-buttons">
+                <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+                <a href="services.html" class="btn btn-secondary">View Services</a>
             </div>
         </div>
-    </header>
-
-    <!-- About Section -->
-    <section class="section about-section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600" alt="Hair Braiding" id="about-image">
-                </div>
-                <div class="about-content">
-                    <h2>About Our Studio</h2>
-                    <p id="about-text">We specialize in authentic African hair braiding techniques combined with modern styling. With over 10 years of experience, we provide premium braiding services that protect your natural hair while giving you stunning, long-lasting styles.</p>
-                    <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-certificate"></i>
-                            <span>Certified Stylists</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-clock"></i>
-                            <span>On-Time Service</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-heart"></i>
-                            <span>Premium Care</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-scroll">
+            <a href="#services" aria-label="Scroll to services">
+                <span class="scroll-icon"></span>
+            </a>
         </div>
     </section>
 
     <!-- Services Preview -->
-    <section class="section services-preview">
+    <section class="services-preview" id="services">
         <div class="container">
-            <h2 class="section-title">Popular Styles</h2>
-            <div class="services-grid" id="services-preview">
-                <!-- Loaded dynamically -->
-                <div class="loading">Loading services...</div>
+            <div class="section-header">
+                <span class="section-tag">Our Services</span>
+                <h2 class="section-title">What We Offer</h2>
+                <p class="section-desc">Professional braiding services tailored to your unique style</p>
+            </div>
+            <div class="services-grid" id="servicesGrid">
+                <div class="service-card">
+                    <div class="service-icon">&#x1F487;</div>
+                    <h3>Box Braids</h3>
+                    <p>Classic protective style with endless styling possibilities. Available in various sizes and lengths.</p>
+                    <span class="service-price">From $120</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#x1F487;</div>
+                    <h3>Cornrows</h3>
+                    <p>Intricate patterns and designs. Perfect for any occasion, from casual to formal.</p>
+                    <span class="service-price">From $60</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#x1F487;</div>
+                    <h3>Twists</h3>
+                    <p>Two-strand or Senegalese twists. A versatile style that protects and beautifies.</p>
+                    <span class="service-price">From $100</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#x1F487;</div>
+                    <h3>Knotless Braids</h3>
+                    <p>Gentle on your edges with a natural, seamless look. The latest trend in protective styling.</p>
+                    <span class="service-price">From $150</span>
+                </div>
             </div>
             <div class="text-center">
-                <a href="services.html" class="btn btn-primary">View All Services</a>
+                <a href="services.html" class="btn btn-outline">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/about-salon.jpg" alt="Nadia Braids Salon Interior" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">About Us</span>
+                    <h2>Passionate About Perfect Braids</h2>
+                    <p>With over 10 years of experience, Nadia Braids has been serving Bear, Delaware and surrounding areas with exceptional hair braiding services. We use only high-quality hair extensions and products to ensure your braids look stunning and last longer.</p>
+                    <p>Our team of skilled braiders is trained in the latest techniques and styles, ensuring you leave our salon looking and feeling your best.</p>
+                    <ul class="about-features">
+                        <li><span class="check-icon">&#x2713;</span> 10+ Years Experience</li>
+                        <li><span class="check-icon">&#x2713;</span> Premium Quality Hair</li>
+                        <li><span class="check-icon">&#x2713;</span> Sanitized Tools</li>
+                        <li><span class="check-icon">&#x2713;</span> Comfortable Environment</li>
+                    </ul>
+                    <a href="about.html" class="btn btn-primary">Learn More</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Gallery Preview -->
-    <section class="section gallery-preview">
+    <section class="gallery-preview">
         <div class="container">
-            <h2 class="section-title">Our Work</h2>
-            <div class="gallery-grid" id="gallery-preview">
-                <!-- Loaded dynamically -->
-                <div class="loading">Loading gallery...</div>
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Our Work</h2>
+                <p class="section-desc">Browse through our gallery of beautiful braiding styles</p>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item">
+                    <img src="images/gallery-1.jpg" alt="Box Braids Style" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Box Braids</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-2.jpg" alt="Cornrows Style" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Cornrows</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-3.jpg" alt="Twists Style" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Senegalese Twists</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-4.jpg" alt="Knotless Braids" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Knotless Braids</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-5.jpg" alt="Goddess Braids" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Goddess Braids</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-6.jpg" alt="Lemonade Braids" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Lemonade Braids</span>
+                    </div>
+                </div>
             </div>
             <div class="text-center">
                 <a href="gallery.html" class="btn btn-outline">View Full Gallery</a>
@@ -101,37 +234,80 @@
         </div>
     </section>
 
-    <!-- Contact Info -->
-    <section class="section contact-bar">
+    <!-- Reviews Section -->
+    <section class="reviews-section" id="reviews">
         <div class="container">
-            <div class="contact-info-grid">
-                <div class="contact-info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h4>Visit Us</h4>
-                        <p id="business-address">123 Beauty Lane, Atlanta, GA 30309</p>
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-desc">Real reviews from our happy customers</p>
+            </div>
+            <div class="reviews-grid" id="reviewsGrid">
+                <div class="review-card">
+                    <div class="review-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+                    <p class="review-text">"Nadia did an amazing job on my box braids! They lasted for 8 weeks and still looked fresh. Highly recommend!"</p>
+                    <div class="review-author">
+                        <span class="review-name">Sarah M.</span>
+                        <span class="review-service">Box Braids</span>
                     </div>
                 </div>
-                <div class="contact-info-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h4>Call Us</h4>
-                        <p id="business-phone">(404) 555-0123</p>
+                <div class="review-card">
+                    <div class="review-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+                    <p class="review-text">"The best braiding experience I've ever had. Professional, clean, and my cornrows were absolutely perfect!"</p>
+                    <div class="review-author">
+                        <span class="review-name">Jessica K.</span>
+                        <span class="review-service">Cornrows</span>
                     </div>
                 </div>
-                <div class="contact-info-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h4>Email Us</h4>
-                        <p id="business-email">bookings@royalbraids.com</p>
+                <div class="review-card">
+                    <div class="review-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+                    <p class="review-text">"Love my knotless braids! They are so light and comfortable. Will definitely be coming back!"</p>
+                    <div class="review-author">
+                        <span class="review-name">Amanda T.</span>
+                        <span class="review-service">Knotless Braids</span>
                     </div>
                 </div>
-                <div class="contact-info-item">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                        <h4>Hours</h4>
-                        <p>Tue - Sat: 9AM - 7PM</p>
-                    </div>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn btn-outline" id="writeReviewBtn">Write a Review</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section class="booking-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Your New Look?</h2>
+                <p>Book your appointment today and experience the best hair braiding services in Bear, Delaware.</p>
+                <a href="booking.html" class="btn btn-primary btn-large">Book Appointment Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">&#x1F4CD;</div>
+                    <h3>Location</h3>
+                    <p>1137 King James Court<br>Bear, Delaware 19701</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">&#x1F4DE;</div>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+12408555478">(240) 855-5478</a></p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">&#x1F4E7;</div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:nadiayenchi3@gmail.com">nadiayenchi3@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">&#x1F552;</div>
+                    <h3>Hours</h3>
+                    <p>Mon - Fri: 9:00 AM - 7:00 PM<br>Sat: 9:00 AM - 5:00 PM<br>Sun: Closed</p>
                 </div>
             </div>
         </div>
@@ -140,38 +316,103 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
-                    <h3 id="footer-name">Royal Braids</h3>
-                    <p>Professional hair braiding services with a touch of elegance.</p>
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-text">Nadia</span><span class="logo-accent">Braids</span>
+                    </a>
+                    <p>Professional hair braiding services with a touch of excellence. Your beauty is our passion.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link">&#x1F4F7;</a>
+                        <a href="#" aria-label="Instagram" class="social-link">&#x1F4F8;</a>
+                        <a href="#" aria-label="Twitter" class="social-link">&#x1F4F1;</a>
+                    </div>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-social">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Box Braids</a></li>
+                        <li><a href="services.html">Cornrows</a></li>
+                        <li><a href="services.html">Twists</a></li>
+                        <li><a href="services.html">Knotless Braids</a></li>
+                        <li><a href="services.html">Goddess Braids</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>1137 King James Court<br>Bear, Delaware 19701</p>
+                    <p><a href="tel:+12408555478">(240) 855-5478</a></p>
+                    <p><a href="mailto:nadiayenchi3@gmail.com">nadiayenchi3@gmail.com</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p> Royal Braids. All rights reserved.</p>
-                <a href="admin-login.html" class="admin-link">Admin Login</a>
+                <p>&copy; 2026 Nadia Braids. All rights reserved.</p>
+                <p class="admin-link"><a href="admin-login.html">Admin Login</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="js/supabase-config.js"></script>
+    <!-- Review Modal -->
+    <div class="modal" id="reviewModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <h2>Write a Review</h2>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label for="reviewerName">Your Name</label>
+                    <input type="text" id="reviewerName" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="reviewRating">Rating</label>
+                    <div class="star-rating" id="starRating">
+                        <span data-rating="1">&#x2605;</span>
+                        <span data-rating="2">&#x2605;</span>
+                        <span data-rating="3">&#x2605;</span>
+                        <span data-rating="4">&#x2605;</span>
+                        <span data-rating="5">&#x2605;</span>
+                    </div>
+                    <input type="hidden" id="reviewRating" value="5">
+                </div>
+                <div class="form-group">
+                    <label for="reviewService">Service Type</label>
+                    <select id="reviewService" required>
+                        <option value="">Select a service</option>
+                        <option value="Box Braids">Box Braids</option>
+                        <option value="Cornrows">Cornrows</option>
+                        <option value="Twists">Twists</option>
+                        <option value="Knotless Braids">Knotless Braids</option>
+                        <option value="Goddess Braids">Goddess Braids</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reviewText">Your Review</label>
+                    <textarea id="reviewText" rows="4" required placeholder="Tell us about your experience..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Review</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">&#x2191;</button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/reviews.js"></script>
 </body>
 </html>
