@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nadiabraids.netlify.app/sitemap.xml
+Sitemap: https://nadia-braids.netlify.app/sitemap.xml
 
 # Disallow admin paths
 Disallow: /admin
